@@ -1,0 +1,50 @@
+[
+    {
+        "type": "negative",
+        "title": "should show error for invalid Username",
+        "description": "Invalid username",
+        "username": "invalid_user",
+        "password": "secret_sauce",
+        "expectedError": "Epic sadface: Username and password do not match any user in this service"
+    },
+    {
+        "type": "negative",
+        "title": "should show error for invalid Password",
+        "description": "Invalid password",
+        "username": "standard_user",
+        "password": "wrong_password",
+        "expectedError": "Epic sadface: Username and password do not match any user in this service"
+    },
+    {
+        "type": "negative",
+        "title": "should validate mandatory Username field",
+        "description": "Empty username",
+        "username": "",
+        "password": "secret_sauce",
+        "expectedError": "Epic sadface: Username is required"
+    },
+    {
+        "type": "negative",
+        "title": "should validate mandatory Password field",
+        "description": "Empty password",
+        "username": "standard_user",
+        "password": "",
+        "expectedError": "Epic sadface: Password is required"
+    },
+    {
+        "type": "negative",
+        "title": "should show error for locked out user",
+        "description": "Locked out user",
+        "username": "locked_out_user",
+        "password": "secret_sauce",
+        "expectedError": "Epic sadface: Sorry, this user has been locked out."
+    },
+    {
+        "type": "negative",
+        "title": "should validate when both Username and Password are empty",
+        "description": "Both fields empty",
+        "username": "",
+        "password": "",
+        "expectedError": "Epic sadface: Username is required"
+    }
+]

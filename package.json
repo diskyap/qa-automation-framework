@@ -1,0 +1,70 @@
+{
+  "name": "qa-automation-framework",
+  "version": "1.0.0",
+  "description": "QA Automation Framework using Playwright and Allure Reporter",
+  "main": "index.js",
+  "type": "commonjs",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "auth": "playwright test auth.setup.ts",
+    "test": "npm run clean:results && playwright test",
+    "test:headed": "npm run clean:results && playwright test --headed",
+    "test:ui": "npm run clean:results && playwright test --ui",
+    "test:api": "npm run clean:results && playwright test tests/api",
+    "test:smoke": "npm run clean:results && playwright test --grep @smoke",
+    "test:negative": "npm run clean:results && playwright test --grep @negative",
+    "test:positive": "npm run clean:results && playwright test --grep @positive",
+    "test:auth": "npm run clean:results && playwright test --grep @auth",
+    "test:login": "npm run clean:results && playwright test --grep @login",
+    "test:inventory": "npm run clean:results && playwright test --grep @inventory",
+    "test:cart": "npm run clean:results && playwright test --grep @cart",
+    "test:checkout": "npm run clean:results && playwright test --grep @checkout",
+    "test:regression": "npm run clean:results && playwright test --grep @regression",
+    "test:e2e": "npm run clean:results && playwright test --grep @e2e",
+    "install:browsers": "playwright install",
+    "reporter": "allure generate allure-results --clean -o allure-report && npm run copy:allure",
+    "reporter:open": "allure open allure-report",
+    "reporter:clean": "rimraf allure-report",
+    "test:dev": "ENV=dev npm test",
+    "test:prod": "ENV=prod npm test",
+    "copy:allure": "cp -r allure/categories.json allure-results/categories.json && cp -r allure/environment.properties allure-results/environment.properties && cp -r allure/executor.json allure-results/executor.json",
+    "lint": "eslint . --ext .ts",
+    "clean:results": "rimraf allure-results",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier . --write"
+  },
+  "keywords": [
+    "qa",
+    "automation",
+    "playwright",
+    "allure"
+  ],
+  "author": "Disky Adit Prastio",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^10.4.0",
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.9.1",
+    "@typescript-eslint/eslint-plugin": "^8.59.4",
+    "@typescript-eslint/parser": "^8.59.4",
+    "ajv": "^8.20.0",
+    "allure-js-commons": "^3.9.0",
+    "allure-playwright": "^3.9.0",
+    "eslint": "^10.4.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.5",
+    "prettier": "^3.8.3",
+    "rimraf": "^6.0.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.4",
+    "winston": "^3.19.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}

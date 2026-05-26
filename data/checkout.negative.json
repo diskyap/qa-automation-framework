@@ -1,0 +1,38 @@
+[
+    {
+        "type": "negative",
+        "title": "should show error when first name is empty",
+        "description": "Missing first name",
+        "firstName": "",
+        "lastName": "Doe",
+        "zipCode": "12345",
+        "expectedError": "Error: First Name is required"
+    },
+    {
+        "type": "negative",
+        "title": "should show error when last name is empty",
+        "description": "Missing last name",
+        "firstName": "John",
+        "lastName": "",
+        "zipCode": "12345",
+        "expectedError": "Error: Last Name is required"
+    },
+    {
+        "type": "negative",
+        "title": "should show error when zip code is empty",
+        "description": "Missing zip code",
+        "firstName": "John",
+        "lastName": "Doe",
+        "zipCode": "",
+        "expectedError": "Error: Postal Code is required"
+    },
+    {
+        "type": "negative",
+        "title": "should show error when all required fields are empty",
+        "description": "Missing all required fields",
+        "firstName": "",
+        "lastName": "",
+        "zipCode": "",
+        "expectedError": "Error: First Name is required"
+    }
+]

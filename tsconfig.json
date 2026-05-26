@@ -1,0 +1,34 @@
+{
+    "compilerOptions": {
+        "strict": false,
+        "baseUrl": ".",
+        "paths": {
+            "@pages/*": [
+                "pages/*"
+            ],
+            "@tests/*": [
+                "tests/*"
+            ],
+            "@utils/*": [
+                "utils/*"
+            ],
+            "@helpers/*": [
+                "helpers/*"
+            ],
+            "@fixtures/*": [
+                "fixtures/*"
+            ],
+            "@data/*": [
+                "data/*"
+            ],
+            "@api/*": [
+                "api/*"
+            ],
+        },
+        "resolveJsonModule": true,
+        "esModuleInterop": true,
+        "types": [
+            "node"
+        ]
+    }
+}

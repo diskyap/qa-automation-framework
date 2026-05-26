@@ -1,0 +1,9 @@
+[
+    {
+        "type": "positive",
+        "title": "should login successfully with valid credentials",
+        "description": "valid login",
+        "username": "standard_user",
+        "password": "secret_sauce"
+    }
+]
