@@ -3,8 +3,6 @@ import * as allure from 'allure-js-commons'
 import { BasePage } from './base.page'
 import { LogHelper } from '@utils/logger'
 
-test.use({ storageState: 'storage/auth.json' })
-
 /**
  * Cart page class to handle elements and actions on the shopping cart page
  */
