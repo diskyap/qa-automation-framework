@@ -1,3 +1,5 @@
+[![QA Automation Pipeline](https://github.com/diskyap/qa-automation-framework/actions/workflows/playwright.yml/badge.svg?branch=master)](https://github.com/diskyap/qa-automation-framework/actions/workflows/playwright.yml)
+
 # SauceDemo E2E Test Automation Framework
 
 A comprehensive end-to-end testing suite for the SauceDemo web application and API testing using Playwright with TypeScript. 
